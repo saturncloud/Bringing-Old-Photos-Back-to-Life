@@ -150,6 +150,13 @@ def main(config):
         P = P.data.cpu()
         P = F.interpolate(P, [ow, oh], mode="nearest")
 
+        if image_name.endswith(".jpg"):
+            image_name = image_name[:-4] + ".png"
+        if image_name.endswith(".jpeg"):
+            image_name = image_name[:-5] + ".png"
+        if image_name.endswith(".tiff"):
+            image_name = image_name[:-5] + ".png"
+        
         tv.utils.save_image(
             (P >= 0.4).float(),
             os.path.join(
