@@ -44,7 +44,7 @@ if __name__ == "__main__":
 
     ## Stage 1: Overall Quality Improve
     print("Running Stage 1: Overall restoration")
-    os.chdir("./Global")
+    os.chdir("./Code/Global")
     stage_1_input_dir = opts.input_folder
     stage_1_output_dir = os.path.join(opts.output_folder, "stage_1_restore_output")
     if not os.path.exists(stage_1_output_dir):
