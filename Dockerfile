@@ -19,13 +19,13 @@ RUN cd Face_Detection/ &&\
   cd ../ 
 
 RUN cd Face_Enhancement/ &&\
-  wget https://facevc.blob.core.windows.net/zhanbo/old_photo/pretrain/Face_Enhancement/checkpoints.zip &&\
-  unzip checkpoints.zip &&\
+  wget https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life/releases/download/v1.0/face_checkpoints.zip &&\
+  unzip face_checkpoints.zip &&\
   cd ../ &&\
   cd Global/ &&\
-  wget https://facevc.blob.core.windows.net/zhanbo/old_photo/pretrain/Global/checkpoints.zip &&\
-  unzip checkpoints.zip &&\
-  rm -f checkpoints.zip &&\
+  wget https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life/releases/download/v1.0/global_checkpoints.zip &&\
+  unzip global_checkpoints.zip &&\
+  rm -f global_checkpoints.zip &&\
   cd ../
 
 RUN pip3 install numpy
