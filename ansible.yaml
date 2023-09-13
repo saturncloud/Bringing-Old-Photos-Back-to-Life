@@ -87,7 +87,7 @@
 
   - name: unarchive Face_Enhancement/checkpoints.zip
     unarchive:
-      src: https://facevc.blob.core.windows.net/zhanbo/old_photo/pretrain/Face_Enhancement/checkpoints.zip
+      src: https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life/releases/download/v1.0/face_checkpoints.zip
       dest: Bringing-Old-Photos-Back-to-Life/Face_Enhancement/
       remote_src: yes
     when: fc.stat.exists == False
@@ -99,7 +99,7 @@
 
   - name: unarchive Global/checkpoints.zip
     unarchive:
-      src: https://facevc.blob.core.windows.net/zhanbo/old_photo/pretrain/Global/checkpoints.zip
+      src: https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life/releases/download/v1.0/global_checkpoints.zip
       dest: Bringing-Old-Photos-Back-to-Life/Global/
       remote_src: yes
     when: gc.stat.exists == False
